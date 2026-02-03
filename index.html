@@ -2,45 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Google Play Store Analytics Dashboard</title>
+    <title>Data Analytics & Visualization Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: #f4f6f8;
             margin: 0;
-            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f9;
+            color: #333;
         }
 
-        h1 {
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 25px;
             text-align: center;
-            color: #2c3e50;
         }
 
-        .card {
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin-top: 8px;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .section {
             background: white;
+            padding: 20px 25px;
+            margin-bottom: 25px;
             border-radius: 10px;
-            padding: 15px;
-            margin: 25px auto;
-            max-width: 1300px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
-        .hidden {
-            display: none;
+        .section h2 {
+            margin-top: 0;
+            color: #2c3e50;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
         }
 
-        iframe {
-            width: 100%;
-            height: 720px;
-            border: none;
-            border-radius: 8px;
+        ul {
+            list-style: none;
+            padding-left: 0;
         }
 
-        .note {
+        ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 16px;
+        }
+
+        ul li:last-child {
+            border-bottom: none;
+        }
+
+        footer {
             text-align: center;
-            color: #888;
+            padding: 15px;
+            background: #2c3e50;
+            color: white;
             font-size: 14px;
         }
     </style>
@@ -48,75 +79,90 @@
 
 <body>
 
-<h1>📊 Google Play Store Analytics Dashboard</h1>
-<p class="note">Charts are visible only during their allowed IST time windows</p>
+<header>
+    <h1>📊 Data Analytics & Visualization Internship</h1>
+    <p>Python • Data Cleaning • NLP • Plotly • Web Dashboard</p>
+</header>
 
-<!-- PROJECT 1 -->
-<div id="p1" class="card hidden">
-    <h2>Project 1: Grouped Bar Chart</h2>
-    <iframe src="project1_chart.html"></iframe>
+<div class="container">
+
+    <div class="section">
+        <h2>🔹 Programming Foundations</h2>
+        <ul>
+            <li>Python Basics</li>
+            <li>NumPy Basics</li>
+            <li>Pandas Basics</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🔹 Project Introduction</h2>
+        <ul>
+            <li>Introduction of Project</li>
+            <li>Understanding Dataset</li>
+            <li>Project Objectives</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🔹 Data Processing</h2>
+        <ul>
+            <li>Data Cleaning</li>
+            <li>Handling Missing & Duplicate Values</li>
+            <li>Data Transformation</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🔹 Data Transmission</h2>
+        <ul>
+            <li>Data Flow Between Components</li>
+            <li>CSV / JSON Handling</li>
+            <li>Frontend & Backend Integration</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🔹 Sentiment Analysis (NLP)</h2>
+        <ul>
+            <li>Text Preprocessing</li>
+            <li>Tokenization & Stopwords</li>
+            <li>Sentiment Classification</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🔹 Data Visualization using Plotly</h2>
+        <ul>
+            <li>Plotly – Part 1 (Basic Charts)</li>
+            <li>Plotly – Part 2 (Interactive Charts)</li>
+            <li>Plotly – Part 3 (Advanced Visualizations)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🔹 Dashboard Development</h2>
+        <ul>
+            <li>Creating Web Dashboard</li>
+            <li>Embedding Plotly Charts</li>
+            <li>Time-Based Chart Visibility</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🔹 Deployment Comparison</h2>
+        <ul>
+            <li>Tkinter vs HTML</li>
+            <li>Desktop vs Web Dashboards</li>
+            <li>Final Conclusion</li>
+        </ul>
+    </div>
+
 </div>
 
-<!-- PROJECT 2 -->
-<div id="p2" class="card hidden">
-    <h2>Project 2: Dual Axis – Free vs Paid</h2>
-    <iframe src="project2_chart.html"></iframe>
-</div>
-
-<!-- PROJECT 3 -->
-<div id="p3" class="card hidden">
-    <h2>Project 3: Treemap – Global Installs</h2>
-    <iframe src="project3_treemap.html"></iframe>
-</div>
-
-<!-- PROJECT 4 -->
-<div id="p4" class="card hidden">
-    <h2>Project 4: Stacked Area Chart</h2>
-    <iframe src="project4_chart.html"></iframe>
-</div>
-
-<!-- PROJECT 5 -->
-<div id="p5" class="card hidden">
-    <h2>Project 5: Bubble Chart</h2>
-    <iframe src="project5_chart.html"></iframe>
-</div>
-
-<!-- PROJECT 6 -->
-<div id="p6" class="card hidden">
-    <h2>Project 6: Time Series Analysis</h2>
-    <iframe src="project6_chart.html"></iframe>
-</div>
-
-<script>
-    function showChartsByIST() {
-        const now = new Date();
-        const utcHour = now.getUTCHours();
-        const istHour = (utcHour + 5.5) % 24;
-
-        // Helper
-        const show = id => document.getElementById(id).classList.remove('hidden');
-
-        // Project 1: 3 PM – 5 PM IST
-        if (istHour >= 15 && istHour < 17) show("p1");
-
-        // Project 2: 1 PM – 2 PM IST
-        if (istHour >= 13 && istHour < 14) show("p2");
-
-        // Project 3: 6 PM – 8 PM IST
-        if (istHour >= 18 && istHour < 20) show("p3");
-
-        // Project 4: 4 PM – 6 PM IST
-        if (istHour >= 16 && istHour < 18) show("p4");
-
-        // Project 5: 5 PM – 7 PM IST
-        if (istHour >= 17 && istHour < 19) show("p5");
-
-        // Project 6: 6 PM – 9 PM IST
-        if (istHour >= 18 && istHour < 21) show("p6");
-    }
-
-    showChartsByIST();
-</script>
+<footer>
+    © 2026 Data Analytics Internship Project
+</footer>
 
 </body>
 </html>
