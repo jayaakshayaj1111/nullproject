@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Play Store Analytics Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 25px auto;
+            max-width: 1300px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        iframe {
+            width: 100%;
+            height: 720px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .note {
+            text-align: center;
+            color: #888;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>📊 Google Play Store Analytics Dashboard</h1>
+<p class="note">Charts are visible only during their allowed IST time windows</p>
+
+<!-- PROJECT 1 -->
+<div id="p1" class="card hidden">
+    <h2>Project 1: Grouped Bar Chart</h2>
+    <iframe src="project1_chart.html"></iframe>
+</div>
+
+<!-- PROJECT 2 -->
+<div id="p2" class="card hidden">
+    <h2>Project 2: Dual Axis – Free vs Paid</h2>
+    <iframe src="project2_chart.html"></iframe>
+</div>
+
+<!-- PROJECT 3 -->
+<div id="p3" class="card hidden">
+    <h2>Project 3: Treemap – Global Installs</h2>
+    <iframe src="project3_treemap.html"></iframe>
+</div>
+
+<!-- PROJECT 4 -->
+<div id="p4" class="card hidden">
+    <h2>Project 4: Stacked Area Chart</h2>
+    <iframe src="project4_chart.html"></iframe>
+</div>
+
+<!-- PROJECT 5 -->
+<div id="p5" class="card hidden">
+    <h2>Project 5: Bubble Chart</h2>
+    <iframe src="project5_chart.html"></iframe>
+</div>
+
+<!-- PROJECT 6 -->
+<div id="p6" class="card hidden">
+    <h2>Project 6: Time Series Analysis</h2>
+    <iframe src="project6_chart.html"></iframe>
+</div>
+
+<script>
+    function showChartsByIST() {
+        const now = new Date();
+        const utcHour = now.getUTCHours();
+        const istHour = (utcHour + 5.5) % 24;
+
+        // Helper
+        const show = id => document.getElementById(id).classList.remove('hidden');
+
+        // Project 1: 3 PM – 5 PM IST
+        if (istHour >= 15 && istHour < 17) show("p1");
+
+        // Project 2: 1 PM – 2 PM IST
+        if (istHour >= 13 && istHour < 14) show("p2");
+
+        // Project 3: 6 PM – 8 PM IST
+        if (istHour >= 18 && istHour < 20) show("p3");
+
+        // Project 4: 4 PM – 6 PM IST
+        if (istHour >= 16 && istHour < 18) show("p4");
+
+        // Project 5: 5 PM – 7 PM IST
+        if (istHour >= 17 && istHour < 19) show("p5");
+
+        // Project 6: 6 PM – 9 PM IST
+        if (istHour >= 18 && istHour < 21) show("p6");
+    }
+
+    showChartsByIST();
+</script>
+
+</body>
+</html>
